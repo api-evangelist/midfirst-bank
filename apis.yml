@@ -32,6 +32,8 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/midfirst-bank-domain-security.yml
 - type: Website
   url: https://www.midfirst.com/
 - type: Documentation
@@ -46,6 +48,12 @@ common:
   url: https://www.midfirst.com/security
 - type: Support
   url: https://www.midfirst.com/contact-us
+- type: Login
+  url: https://banking.secure.midfirst.com/D1MIDFIRSTConsumer/
+- type: SignUp
+  url: https://online-enrollment.secure.midfirst.com/onlineEnrollment/
+- type: LLMsTxt
+  url: llms/midfirst-bank-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
