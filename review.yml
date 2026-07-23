@@ -1,0 +1,96 @@
+aid: midfirst-bank
+name: MidFirst Bank
+review:
+  question: Does MidFirst Bank expose a first-party public developer API, and what is its US open-finance posture?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    MidFirst Bank does not operate a first-party public developer portal and
+    publishes no downloadable OpenAPI/Swagger specification. Probes of
+    developer.midfirst.com, developers.midfirst.com, and api.midfirst.com did
+    not resolve (connection failures). The bank is a federally chartered
+    savings association headquartered in Oklahoma City, owned by Midland
+    Financial Co., and is the largest privately owned bank in the US (~$42B
+    assets).
+
+    US open finance is voluntary and fragmented, and MidFirst's posture is
+    aggregator-mediated rather than first-party. Its "Open Access" program adds
+    direct API connections between its Business Online Banking / Business Online
+    Banking Express platforms and consumer-permissioned data aggregators,
+    replacing screen scraping. Named aggregators are Plaid, MX, Stripe, Intuit,
+    Mastercard/Finicity, Envestnet Yodlee, and Morningstar. Data flows only
+    through these aggregators with customer consent (re-authentication with
+    online-banking credentials plus a one-time passcode); there is no publicly
+    callable first-party API surface, no published base URL, and no developer
+    onboarding.
+
+    No FDX (Financial Data Exchange) participation is stated on MidFirst's site,
+    and no CFPB Section 1033 (Personal Financial Data Rights) posture is
+    published as of the review date. No OpenAPI/Swagger was harvested because
+    none is publicly available.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalUrl: null
+    downloadableSpec: false
+    specProvenance: none
+    fdxParticipant: unknown
+    fdxDocumented: false
+    section1033Documented: false
+    aggregatorOnly: true
+    aggregators:
+      - Plaid
+      - MX
+      - Stripe
+      - Intuit
+      - Mastercard/Finicity
+      - Envestnet Yodlee
+      - Morningstar
+    authModel: >-
+      Consumer-permissioned aggregator authentication (online-banking credentials
+      plus one-time passcode and account-sharing consent) via the Open Access
+      program. No documented first-party OAuth2/OIDC, API-key, or mTLS developer
+      auth, because no first-party API is exposed.
+    charterType: Federally chartered savings association (thrift)
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No first-party public REST API is documented. Aggregator connections are private, partner-gated integrations.
+  probes:
+    - url: https://developer.midfirst.com
+      httpStatus: 000
+      note: Did not resolve (connection failure).
+    - url: https://developers.midfirst.com
+      httpStatus: 000
+      note: Did not resolve (connection failure).
+    - url: https://api.midfirst.com
+      httpStatus: 000
+      note: Did not resolve (connection failure).
+    - url: https://www.midfirst.com/
+      httpStatus: 200
+      note: Corporate website.
+    - url: https://www.midfirst.com/open-access
+      httpStatus: 200
+      note: Open Access program page describing aggregator direct-API connections.
+sources:
+  - url: https://www.midfirst.com/open-access
+    type: Documentation
+    note: Open Access program - direct API connections between aggregators and Business Online Banking; names Plaid, MX, Stripe, Intuit, Mastercard/Finicity, Envestnet Yodlee, Morningstar. No FDX/1033/first-party API mentioned.
+  - url: https://www.midfirst.com/about-us/largest-privately-owned-u-s-bank
+    type: Website
+    note: Confirms largest privately owned US bank positioning and corporate profile.
+  - url: https://en.wikipedia.org/wiki/MidFirst_Bank
+    type: Reference
+    note: Founded 1982, HQ Oklahoma City, ~$42B assets, privately held via Midland Financial Co., operates in OK/AZ/CA/CO/NV/TX/UT.
+  - url: https://www.openbankingtracker.com/provider/midfirst-bank
+    type: Reference
+    note: Third-party tracker corroborating aggregator-mediated (Plaid/Finicity) access and absence of a dedicated public developer portal.
+actions:
+  openapiHarvested: false
+  reason: |
+    No first-party public API and no publicly downloadable OpenAPI/Swagger exist
+    for MidFirst Bank. The honest, non-fabricated result is an identity-only
+    record with an aggregator-only open-finance posture (Open Access program);
+    apis[] is empty and no spec was harvested.
