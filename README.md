@@ -1,4 +1,4 @@
-# MidFirst Bank (midfirst-bank)
+# MidFirst Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,61 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-MidFirst Bank is a federally chartered savings association (thrift) headquartered in Oklahoma City, Oklahoma, and owned by Midland Financial Co. Founded in 1982 with roots in Midland Mortgage from the early 1950s, it is the largest privately owned bank in the United States, with roughly $42 billion in assets and operations spanning retail banking, private banking, commercial real estate lending, and nationwide mortgage servicing across Oklahoma, Arizona, California, Colorado, Nevada, Texas, and Utah.
+MidFirst Bank is a federally chartered savings association (thrift) headquartered in Oklahoma City, Oklahoma, and owned by Midland Financial Co. Founded in 1982 with roots in Midland Mortgage from the early 1950s, it is the largest privately owned bank in the United States, with roughly $42 billion in assets and retail banking, private banking, commercial real estate lending, and nationwide mortgage servicing operations across Oklahoma, Arizona, California, Colorado, Nevada, Texas, and Utah. MidFirst does not operate a first-party public developer portal or publish downloadable OpenAPI/Swagger specifications. Its open-finance posture is aggregator-mediated: through its "Open Access" program, MidFirst adds direct API connections between its Business Online Banking platforms and consumer-permissioned data aggregators (Plaid, MX, Stripe, Intuit, Mastercard/Finicity, Envestnet Yodlee, and Morningstar), replacing screen scraping. There is no publicly documented first-party API surface, and no FDX participation or CFPB Section 1033 data-access posture is published on its site as of this review.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/midfirst-bank/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/midfirst-bank/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Savings Association · Open Finance · Personal Finance · Business Banking
 
-## Tags
+## MidFirst Bank on APIs.io
 
-- Financial Services
-- Banking
-- United States
-- Savings Association
-- Open Finance
-- Data Aggregation
-- Personal Finance
-- Business Banking
+Everything profiled for MidFirst Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/midfirst-bank/](https://apis.io/providers/midfirst-bank/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Open Finance / API Posture
+#### Security (1)
 
-MidFirst Bank does **not** operate a first-party public developer portal, and no downloadable OpenAPI/Swagger specification is published. Probes of `developer.midfirst.com`, `developers.midfirst.com`, and `api.midfirst.com` did not resolve.
+Authentication, trust centre, and vulnerability disclosure.
 
-Its open-finance posture is **aggregator-mediated** through the **Open Access** program: MidFirst adds direct API connections between its Business Online Banking / Business Online Banking Express platforms and consumer-permissioned data aggregators, replacing the prior screen-scraping method. Customers reauthenticate through the aggregator with their online-banking credentials and a one-time code, then consent to share selected accounts.
+- [Midfirst Bank Domain Security](https://apis.io/security/midfirst-bank/midfirst-bank-domain-security/)
 
-Named aggregators in the Open Access program:
+## Where to find this API
 
-- Plaid
-- MX
-- Stripe
-- Intuit
-- Mastercard + Finicity
-- Envestnet Yodlee
-- Morningstar
-
-No FDX (Financial Data Exchange) participation and no CFPB Section 1033 data-access posture is published on the MidFirst site as of this review. There are no first-party public API products to list.
-
-- **Open Access (data-access) page:** [https://www.midfirst.com/open-access](https://www.midfirst.com/open-access)
-
-## APIs
-
-None. MidFirst Bank exposes no publicly documented first-party API. Consumer- and business-permissioned data access is available only through third-party aggregators via the Open Access program (see above).
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.midfirst.com/)
-- [Documentation — Open Access](https://www.midfirst.com/open-access)
-- [LinkedIn](https://www.linkedin.com/company/midfirst-bank)
-- [Blog — Latest News](https://www.midfirst.com/about-us/latest-news)
-- [Privacy Policy](https://www.midfirst.com/privacy)
-- [Domain Security](https://www.midfirst.com/security)
+- [Documentation](https://www.midfirst.com/open-access)
+- [Sign up](https://online-enrollment.secure.midfirst.com/onlineEnrollment/)
 - [Support](https://www.midfirst.com/contact-us)
+- [Blog](https://www.midfirst.com/about-us/latest-news)
+- [Privacy policy](https://www.midfirst.com/privacy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 11.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 23.7 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 7.9** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/midfirst-bank/](https://apis.io/providers/midfirst-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for MidFirst Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/midfirst-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
